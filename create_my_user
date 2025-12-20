@@ -1,6 +1,11 @@
 #!/bin/bash
 set -euo pipefail
 
+if [[ $EUID -ne 0 ]]; then
+  echo "Must be run with root (sudo)"
+  exit 1
+fi
+
 USER="zakhar"
 HOME_DIR="/home/$USER"
 SSH_DIR="$HOME_DIR/.ssh"
