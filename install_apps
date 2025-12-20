@@ -11,4 +11,4 @@ eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 sudo apt -y install build-essential mc
 
-brew install gcc
+brew install gcc btop
