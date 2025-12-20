@@ -9,6 +9,6 @@ echo >> "/home/$USER/.bashrc"
 echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> "/home/$USER/.bashrc"
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
-sudo apt -y install build-essential mc
+sudo apt -y install build-essential mc neovim
 
 brew install gcc btop
