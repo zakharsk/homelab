@@ -1,6 +1,14 @@
 #!/bin/bash
 set -euo pipefail
 
+USER="zakhar"
+
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
-sudo apt -y install mc
+echo >> "/home/$USER/.bashrc"
+echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> "/home/$USER/.bashrc"
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
+sudo apt -y install build-essential mc
+
+brew install gcc
