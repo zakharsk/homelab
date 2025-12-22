@@ -34,4 +34,8 @@ SUDO_FILE="/etc/sudoers.d/$USER"
 echo "$USER ALL=(ALL) NOPASSWD:ALL" > "$SUDO_FILE"
 chmod 440 "$SUDO_FILE"
 
+SSHD_CONFIG_FILE="/etc/ssh/sshd_config.d/60-no-root-login"
+echo "PermitRootLogin no" > "$SSHD_CONFIG_FILE"
+chmod 644 "$SSHD_CONFIG_FILE"
+
 echo "User $USER created"
