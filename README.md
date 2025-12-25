@@ -28,6 +28,10 @@ bash <(curl -fsSL https://raw.githubusercontent.com/zakharsk/ubuntu_init_scripts
 ```sh
 bash <(curl -fsSL https://raw.githubusercontent.com/zakharsk/ubuntu_init_scripts/main/install_docker)
 ```
+7.1 (Optionaly) Install Tailscale
+```sh
+curl -fsSL https://tailscale.com/install.sh | sh
+```
 
 8. Reboot
 ```sh
