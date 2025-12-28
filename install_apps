@@ -13,4 +13,4 @@ eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 sudo apt -y install build-essential
 
-brew install gcc btop
+brew install gcc btop doggo
