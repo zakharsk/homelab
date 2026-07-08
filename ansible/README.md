@@ -25,8 +25,15 @@ ansible \
 ### Custom command
 
 ```bash
-ansible \
-  all \
-  -b -m shell \
+ansible all \
+  -b \
+  -m shell \
   -a "rm /etc/apt/apt.conf.d/20auto-upgrades /etc/apt/apt.conf.d/50-unattended-upgrades"
+```
+
+```bash
+ansible alpha,bravo,charlie \
+  -b \
+  -m ansible.builtin.file \
+  -a "path=/var/lib/apt/lists/lock state=absent"
 ```
